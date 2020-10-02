@@ -1,0 +1,10 @@
+@import './variables.scss';
+
+html, body {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+* {
+    color: $font-color;
+}
