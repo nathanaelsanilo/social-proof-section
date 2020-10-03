@@ -109,6 +109,14 @@ h1, h2, h3, h4, h5, h6, p {
     }
 }
 
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
 @media screen and (min-width: 992px) {
     body {
         background-image: url('../../images/bg-pattern-top-desktop.svg'), url('../../images/bg-pattern-bottom-desktop.svg');
