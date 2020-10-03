@@ -2,9 +2,145 @@
 
 html, body {
     height: 100%;
-    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../../images/bg-pattern-top-mobile.svg'), url('../../images/bg-pattern-bottom-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 40%, 100% 40%;
+    background-position: top, bottom;
+    background-attachment: fixed;
+}
+
+@font-face {
+    font-family: spartan;
+    src: url('../font/Spartan-VariableFont_wght.ttf');
 }
 
 * {
-    color: $font-color;
+    font-family: spartan;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+.section {
+    &__intro {
+        &--header {
+            color: $box-dark-magenta;
+            font-weight: $font-bold;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        &--subheader {
+            color: $dark-gray-magenta;
+            text-align: center;
+            margin-bottom: 45px;
+        }
+    }
+    &__rating {
+        &--star {
+            margin: 0 3px;
+        }
+        &--text {
+            margin-top: 10px;
+            font-weight: $font-bold;
+        }
+    }
+    &__reviews {
+    }
+}
+
+.container {
+    padding: 8em 0;
+}
+
+.box {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 16px 0;
+    border-radius: 8px;
+    text-align: center;
+    &--pink {
+        color: $box-dark-magenta;
+        background-color: $light-gray-magenta;
+        font-weight: $font-bold;
+    }
+    &--magenta {
+        color: $dark-gray-magenta;
+        background-color: $box-dark-magenta;
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        padding: 28px 30px;
+    }
+    &__body {
+        padding: 0 28px 30px;
+    }
+}
+
+.media {
+    &--image {
+        border-radius: 50%;
+        height: auto;
+        width: 45px;
+    }
+    &__content {
+        text-align: left;
+        margin: 0 22px;
+        color: $white;
+        &--title {
+            font-weight: $font-bold;
+        }
+        &--subtitle {
+            color: $box-pink;
+        }
+        &--text {
+            color: $white;
+            text-align: left;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        background-image: url('../../images/bg-pattern-top-desktop.svg'), url('../../images/bg-pattern-bottom-desktop.svg');
+        background-size: auto;
+    }
+
+    .box {
+        &--pink {
+            padding: 12px 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .section {
+        &__intro {
+            &--header {
+                text-align: left;
+            }
+            &--subheader {
+                text-align: left;
+            }
+        }
+        &__rating {
+            &--images {
+                flex: 1;
+                padding: 0 15px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                margin: 0;
+            }
+            &--text {
+                margin-top: 0;
+                flex: 2;
+                text-align: left;
+            }
+        }
+    }
 }
