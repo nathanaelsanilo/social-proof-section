@@ -40,6 +40,15 @@ h1, h2, h3, h4, h5, h6, p {
   margin-top: 10px;
   font-weight: 700;
 }
+.section__reviews .col:nth-child(1) {
+  position: relative;
+  bottom: 15px;
+}
+.section__reviews .col:nth-child(3) {
+  position: relative;
+  top: 15px;
+}
+
 .container {
   padding: 8em 0;
 }
@@ -59,6 +68,8 @@ h1, h2, h3, h4, h5, h6, p {
 .box--magenta {
   color: #937b92;
   background-color: #502050;
+  margin: 0;
+  min-height: 300px;
 }
 .box__header {
   display: flex;
